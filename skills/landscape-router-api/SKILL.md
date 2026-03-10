@@ -1,12 +1,12 @@
 ---
 name: landscape-router-api
-description: Operate Landscape Router via its REST OpenAPI spec in `landscape-types/openapi.json`, including logging in at `POST /api/auth/login` to obtain a bearer token before calling protected endpoints. Use when you need to plan or execute API calls for router management (interfaces, routes, DHCP/DNS, firewall, certificates, devices, system config/info, logs, metrics, and related services).
+description: Operate Landscape Router via its REST OpenAPI spec (bundled as `references/openapi.json`), including logging in at `POST /api/auth/login` to obtain a bearer token before calling protected endpoints. Use when you need to plan or execute API calls for router management (interfaces, routes, DHCP/DNS, firewall, certificates, devices, system config/info, logs, metrics, and related services).
 ---
 
 # Landscape Router API
 
 ## Overview
-Use this skill to call Landscape Router REST endpoints with correct authentication and response handling, guided by the OpenAPI spec in `landscape-types/openapi.json`.
+Use this skill to call Landscape Router REST endpoints with correct authentication and response handling, guided by the bundled OpenAPI spec at `references/openapi.json`.
 
 ## Workflow
 1. Determine the base URL (host, scheme, port). The OpenAPI spec does not define servers, so ask the user if it is not provided.
@@ -23,8 +23,8 @@ Use this skill to call Landscape Router REST endpoints with correct authenticati
    - Treat non-empty `error_id`, missing `data`, or HTTP >= 400 as errors and surface `message`.
 
 ## Endpoint Discovery
-- Spec location: `landscape-types/openapi.json`.
-- Quick path search: `grep -n "\"/api/" landscape-types/openapi.json`.
+- Spec location: `references/openapi.json`.
+- Quick path search: `grep -n "\"/api/" references/openapi.json`.
 - Tags are listed in the spec near the end; use them to navigate areas.
 - For schema details, search for the referenced schema name under `components.schemas`.
 

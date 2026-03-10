@@ -1,7 +1,7 @@
 # Landscape Router OpenAPI Reference (Quick)
 
 ## Spec Location
-- `/root/workspace/landscape/landscape-types/openapi.json`
+- Bundled with this skill at `references/openapi.json`
 
 ## Authentication
 - Login: `POST /api/auth/login`
@@ -18,5 +18,5 @@ Most responses use `LandscapeApiResp_*`:
 - `args`: optional request args echo
 
 ## Finding Endpoints
-- Search paths: `grep -n "\"/api/" landscape-types/openapi.json`
+- Search paths: `grep -n "\"/api/" references/openapi.json`
 - For schema details: search the schema name under `components.schemas`
