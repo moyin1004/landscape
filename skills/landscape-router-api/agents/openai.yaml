@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landscape Router API"
+  short_description: "Call Landscape Router OpenAPI with login and bearer token"
+  default_prompt: "Use the Landscape Router API skill to plan or execute REST calls via the OpenAPI spec in landscape-types/openapi.json. Ask for the base URL and credentials if missing, login at POST /api/auth/login to obtain data.token, then use Authorization: Bearer <token> for subsequent requests. Use the spec for path/method/schema details and handle the LandscapeApiResp_* envelope."
